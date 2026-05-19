@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Psicológico Crecer | Psicólogos en Villa El Salvador</title>
+  <meta name="description" content="Centro Psicológico Crecer — Atención psicológica profesional en Villa El Salvador. Terapia individual, de pareja, familiar e infantil. 5 ⭐ en Google.">
+  <meta property="og:title" content="Centro Psicológico Crecer | Villa El Salvador">
+  <meta property="og:description" content="Apoyo psicológico profesional cerca de ti. Crecemos juntos hacia tu bienestar emocional.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e2c06d;
+      --dark: #0a0a0a;
+      --dark-2: #141414;
+      --dark-3: #1e1e1e;
+      --cream: #f8f4e8;
+      --cream-2: rgba(248,244,232,0.65);
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--dark);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, rgba(10,10,10,0.9) 0%, rgba(20,14,0,0.75) 100%),
+        url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1400&q=80&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 120px;
+      background: linear-gradient(to top, var(--dark), transparent);
+    }
+    .hero-content { max-width: 760px; z-index: 1; }
+
+    .hero-pill {
+      display: inline-block;
+      border: 1px solid rgba(201,168,76,0.5);
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      padding: 0.5rem 1.5rem;
+      border-radius: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--cream-2);
+      margin-bottom: 0.7rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    .hero-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold-light);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 0.5rem 1.2rem;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--gold);
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 1.1rem 2.5rem;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,168,76,0.3); }
+
+    section { padding: 5.5rem 1.5rem; }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .section-label {
+      display: block;
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.7rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; color: var(--white);
+      line-height: 1.25;
+    }
+    .section-title em { color: var(--gold); font-style: italic; }
+    .section-bar { width: 50px; height: 1px; background: var(--gold); margin-top: 1.2rem; }
+    .section-header { margin-bottom: 3.5rem; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-bar { margin: 1.2rem auto 0; }
+
+    /* ABOUT */
+    .about { background: var(--dark-2); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+    }
+    .about-img { position: relative; }
+    .about-img img { width: 100%; height: 420px; object-fit: cover; display: block; }
+    .about-img::after {
+      content: '';
+      position: absolute;
+      bottom: -12px; right: -12px;
+      width: 60%; height: 60%;
+      border: 1px solid rgba(201,168,76,0.3);
+      pointer-events: none;
+    }
+    .about-text p { font-size: 1.05rem; line-height: 1.85; color: var(--cream-2); margin-bottom: 1.2rem; }
+    .about-text strong { color: var(--gold); }
+
+    /* SERVICES */
+    .services { background: var(--dark); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--dark-2);
+      border: 1px solid rgba(201,168,76,0.1);
+      padding: 2.2rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 0;
+      background: var(--gold);
+      transition: height 0.4s ease;
+    }
+    .service-card:hover { border-color: rgba(201,168,76,0.3); }
+    .service-card:hover::before { height: 100%; }
+    .service-icon { width: 48px; height: 48px; color: var(--gold); margin-bottom: 1.2rem; }
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 600;
+      color: var(--white); margin-bottom: 0.5rem;
+    }
+    .service-desc { font-size: 0.9rem; color: var(--cream-2); line-height: 1.65; }
+
+    /* STATS */
+    .stats { background: var(--gold); padding: 3rem 1.5rem; }
+    .stats-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; justify-content: center; align-items: center;
+      gap: 0; flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; color: var(--dark); padding: 1.2rem 3rem; flex: 1; min-width: 150px; }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem; font-weight: 700;
+      display: block; line-height: 1;
+    }
+    .stat-label { font-size: 0.82rem; opacity: 0.85; margin-top: 0.3rem; font-weight: 700; }
+    .stat-div { width: 1px; height: 60px; background: rgba(10,10,10,0.2); flex-shrink: 0; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--dark-2); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .testi-card {
+      background: var(--dark-3);
+      padding: 2.5rem;
+      border-bottom: 2px solid var(--gold);
+    }
+    .testi-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem; color: var(--gold);
+      line-height: 0.7; margin-bottom: 1rem; opacity: 0.6;
+    }
+    .testi-text { font-size: 1rem; line-height: 1.8; color: var(--cream-2); font-style: italic; margin-bottom: 1.8rem; }
+    .testi-author { display: flex; align-items: center; gap: 1rem; }
+    .testi-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem; color: var(--dark);
+    }
+    .testi-name { font-weight: 700; color: var(--white); }
+    .testi-stars { color: #ffd700; font-size: 0.82rem; margin-top: 2px; }
+
+    /* GALLERY */
+    .gallery { background: var(--dark); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .gallery-item { aspect-ratio: 4/3; overflow: hidden; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    /* LOCATION */
+    .location { background: var(--dark-2); }
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem; align-items: start;
+    }
+    .map-wrap { border: 1px solid rgba(201,168,76,0.2); overflow: hidden; height: 370px; }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+    .location-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem; font-weight: 700;
+      color: var(--white); margin-bottom: 1.8rem;
+    }
+    .loc-row { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1.2rem; color: var(--cream-2); font-size: 0.97rem; line-height: 1.5; }
+    .loc-row svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+    .btn-maps {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; border: 1px solid var(--gold);
+      color: var(--gold); text-decoration: none;
+      padding: 0.8rem 1.8rem; font-size: 0.85rem; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      margin-top: 1rem; transition: all 0.3s;
+    }
+    .btn-maps:hover { background: var(--gold); color: var(--dark); }
+
+    /* CONTACT */
+    .contact { background: var(--dark); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .contact-card {
+      background: var(--dark-2); padding: 2rem;
+      text-align: center; border: 1px solid rgba(201,168,76,0.1);
+      transition: border-color 0.3s;
+    }
+    .contact-card:hover { border-color: var(--gold); }
+    .contact-icon { width: 40px; height: 40px; color: var(--gold); margin: 0 auto 0.8rem; }
+    .contact-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+    .contact-value { font-size: 1rem; color: var(--white); }
+    .contact-link { color: var(--white); text-decoration: none; transition: color 0.2s; }
+    .contact-link:hover { color: var(--gold); }
+
+    footer {
+      background: #050505;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+    .footer-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; color: var(--gold); margin-bottom: 0.3rem;
+    }
+    .footer-sub { font-size: 0.8rem; color: rgba(248,244,232,0.3); }
+
+    .wa-btn {
+      position: fixed; bottom: 1.8rem; right: 1.8rem;
+      background: #25D366; width: 62px; height: 62px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      z-index: 999; transition: all 0.3s ease;
+    }
+    .wa-btn:hover { transform: scale(1.12); }
+    .wa-btn svg { width: 32px; height: 32px; }
+
+    .fade-up { opacity: 0; transform: translateY(25px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .about-grid, .location-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .stat-div { display: none; }
+      .about-img img { height: 280px; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 3.5rem 1rem; }
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-pill">Psicología · Villa El Salvador</div>
+      <h1>Centro Psicológico<br><em>Crecer</em></h1>
+      <p class="hero-tagline">Atención profesional para tu bienestar emocional y mental</p>
+      <p class="hero-sub">"El apoyo que necesitas, cerca de ti en Villa El Salvador"</p>
+      <div class="hero-stars">★★★★★ 5.0 — Calificación perfecta en Google</div>
+      <a href="https://wa.me/51999903323?text=Hola,%20quisiera%20información%20sobre%20consultas%20en%20el%20Centro%20Psicológico%20Crecer" class="btn-gold">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Consultar disponibilidad
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img fade-up">
+          <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=800&q=80&fit=crop" alt="Consultorio Centro Psicológico Crecer">
+        </div>
+        <div class="fade-up">
+          <div class="section-header">
+            <span class="section-label">Quiénes somos</span>
+            <h2 class="section-title">Tu bienestar es<br><em>nuestra misión</em></h2>
+            <div class="section-bar"></div>
+          </div>
+          <p>En el <strong>Centro Psicológico Crecer</strong> brindamos atención psicológica con enfoque humano y profesional. Cada sesión es un espacio seguro donde puedes hablar con libertad y recibir la guía que necesitas.</p>
+          <p>Ubicados en <strong>Villa El Salvador</strong>, atendemos a personas de todas las edades. Nuestros psicólogos tienen experiencia en terapia individual, de pareja, familiar e infantil, adaptándose a tus necesidades reales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <span class="section-label">Atención especializada</span>
+        <h2 class="section-title">Nuestros <em>Servicios</em></h2>
+        <div class="section-bar"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="service-name">Terapia Individual</div>
+          <p class="service-desc">Apoyo personalizado para ansiedad, depresión, duelo, autoestima y manejo del estrés.</p>
+        </div>
+        <div class="service-card fade-up">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          <div class="service-name">Terapia de Pareja</div>
+          <p class="service-desc">Mejora la comunicación, resuelve conflictos y fortalece el vínculo con tu pareja.</p>
+        </div>
+        <div class="service-card fade-up">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div class="service-name">Terapia Familiar</div>
+          <p class="service-desc">Abordamos conflictos familiares para restaurar la armonía y mejorar la convivencia.</p>
+        </div>
+        <div class="service-card fade-up">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/><path d="M9 12l-2 2 2 2"/></svg>
+          <div class="service-name">Psicología Infantil</div>
+          <p class="service-desc">Atención especializada para niños con problemas de conducta, aprendizaje o desarrollo.</p>
+        </div>
+        <div class="service-card fade-up">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <div class="service-name">Orientación Vocacional</div>
+          <p class="service-desc">Evaluación y guía para jóvenes en la toma de decisiones sobre su futuro profesional.</p>
+        </div>
+        <div class="service-card fade-up">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <div class="service-name">Evaluaciones Psicológicas</div>
+          <p class="service-desc">Diagnóstico y evaluación con instrumentos validados para orientar el tratamiento adecuado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat-item fade-up">
+        <span class="stat-number">5.0</span>
+        <div class="stat-label">★ Calificación perfecta</div>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-item fade-up">
+        <span class="stat-number">6+</span>
+        <div class="stat-label">Especialidades</div>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-item fade-up">
+        <span class="stat-number">100%</span>
+        <div class="stat-label">Confidencialidad</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <span class="section-label">Palabras de quienes confían en nosotros</span>
+        <h2 class="section-title">Testimonios de <em>nuestros pacientes</em></h2>
+        <div class="section-bar"></div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card fade-up">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Nunca había ido a un psicólogo y tenía mucho miedo. En el Centro Crecer me recibieron con mucha calidez y sin juzgarme. La terapia me cambió la vida.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">C</div>
+            <div>
+              <div class="testi-name">Carmen Rojas</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-up">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Llevé a mi hijo de 9 años y la psicóloga fue extraordinaria con él. En pocas sesiones noté cambios reales en su comportamiento. Muy profesional y accesible.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Rosa Mamani</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-up">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Mi pareja y yo vinimos a terapia de pareja y fue la mejor decisión. El ambiente es cómodo, hay mucha escucha y claridad. Totalmente recomendado en Villa El Salvador.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">J</div>
+            <div>
+              <div class="testi-name">Jorge Quispe</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Nuestro espacio</span>
+        <h2 class="section-title">Un ambiente <em>seguro y acogedor</em></h2>
+        <div class="section-bar"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-up">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=80&fit=crop" alt="Consultorio psicológico">
+        </div>
+        <div class="gallery-item fade-up">
+          <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=700&q=80&fit=crop" alt="Terapia psicológica">
+        </div>
+        <div class="gallery-item fade-up">
+          <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=700&q=80&fit=crop" alt="Bienestar emocional">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section class="location">
+    <div class="container">
+      <div class="location-grid">
+        <div class="fade-up">
+          <div class="section-header">
+            <span class="section-label">Dónde estamos</span>
+            <h2 class="section-title">Te esperamos en<br><em>Villa El Salvador</em></h2>
+            <div class="section-bar"></div>
+          </div>
+          <div class="loc-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Villa El Salvador 15829, Lima</span>
+          </div>
+          <div class="loc-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>999 903 323</span>
+          </div>
+          <div class="loc-row">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lunes a Viernes: 9:00 am – 7:00 pm<br>Sábados: 9:00 am – 1:00 pm</span>
+          </div>
+          <a href="https://www.google.com/maps/place/CENTRO+PSICOLOGICO+CRECER/@-12.1947211,-76.9547074,17z" target="_blank" class="btn-maps">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Ver en Google Maps
+          </a>
+        </div>
+        <div class="fade-up">
+          <div class="map-wrap">
+            <iframe src="https://maps.google.com/maps?q=-12.1947211,-76.9547074&output=embed" allowfullscreen loading="lazy" title="Centro Psicológico Crecer"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <span class="section-label">Da el primer paso</span>
+        <h2 class="section-title">Hablemos, estamos <em>aquí</em></h2>
+        <div class="section-bar"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card fade-up">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-label">Teléfono</div>
+          <div class="contact-value"><a href="tel:+51999903323" class="contact-link">999 903 323</a></div>
+        </div>
+        <div class="contact-card fade-up">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value"><a href="https://wa.me/51999903323?text=Hola,%20quiero%20información%20sobre%20terapia" class="contact-link">Escríbenos</a></div>
+        </div>
+        <div class="contact-card fade-up">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-label">Ubicación</div>
+          <div class="contact-value">Villa El Salvador<br>Lima, Perú</div>
+        </div>
+        <div class="contact-card fade-up">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="contact-label">Horario</div>
+          <div class="contact-value">Lun–Vie 9am–7pm<br>Sáb 9am–1pm</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-name">Centro Psicológico Crecer</div>
+    <div class="footer-sub">Psicólogos profesionales · Villa El Salvador, Lima · Perú</div>
+  </footer>
+
+  <a href="https://wa.me/51999903323?text=Hola,%20quisiera%20información%20sobre%20consultas" class="wa-btn" title="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -3,575 +3,472 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consultorio Psicológico Elizabeth Guerra | Villa El Salvador</title>
-  <meta name="description" content="Consultorio Psicológico Elizabeth Guerra — Atención psicológica profesional y empática en Villa El Salvador. 5 ⭐ · 11 reseñas en Google. Agenda tu consulta hoy.">
+  <meta name="description" content="Consultorio Psicológico Elizabeth Guerra en Villa El Salvador — Atención psicológica personalizada, cálida y profesional. 5 estrellas en Google. Agenda tu cita.">
   <meta property="og:title" content="Consultorio Psicológico Elizabeth Guerra | Villa El Salvador">
-  <meta property="og:description" content="Psicóloga profesional con 5 estrellas en Villa El Salvador. Terapia individual, de pareja y familiar.">
+  <meta property="og:description" content="Psicología con calidez humana. 5.0 ⭐ · 11 reseñas Google · Villa El Salvador.">
+  <title>Consultorio Psicológico Elizabeth Guerra | Villa El Salvador</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --teal: #0a9396;
-      --teal-dark: #005f73;
-      --teal-light: #94d2bd;
-      --warm: #ee9b00;
-      --bg: #f8fffe;
-      --bg-2: #e9f5f5;
-      --white: #ffffff;
-      --text: #1a2e2e;
-      --text-2: #4a6464;
+      --lavanda: #7c6b9e;
+      --lavanda-claro: #9b8dbf;
+      --lavanda-palido: #f0eaf8;
+      --lavanda-ultra: #f8f4ff;
+      --rosa: #f3e8f8;
+      --blanco: #ffffff;
+      --gris-texto: #5a5870;
+      --gris-claro: #f9f7fc;
+      --negro-suave: #2e2b3a;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--white);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+    body { background: var(--blanco); color: var(--negro-suave); font-family: 'Open Sans', sans-serif; overflow-x: hidden; }
 
     /* NAV */
     nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(10px);
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 100;
-      border-bottom: 1px solid rgba(10,147,150,0.12);
-      box-shadow: 0 1px 15px rgba(0,0,0,0.04);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 18px 8vw; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(124,107,158,.1);
     }
-    .nav-brand { font-size: 1rem; font-weight: 700; color: var(--teal-dark); }
-    .nav-brand span { color: var(--teal); }
+    .nav-logo { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--lavanda); letter-spacing: .5px; }
     .nav-cta {
-      background: var(--teal);
-      color: var(--white);
-      text-decoration: none;
-      padding: 0.6rem 1.4rem;
-      border-radius: 50px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: all 0.3s;
+      background: var(--lavanda); color: #fff; padding: 9px 22px;
+      font-family: 'Open Sans', sans-serif; font-size: .8rem; font-weight: 600;
+      border-radius: 50px; text-decoration: none; letter-spacing: .5px; transition: all .3s;
     }
-    .nav-cta:hover { background: var(--teal-dark); }
+    .nav-cta:hover { background: var(--lavanda-claro); transform: translateY(-1px); }
 
     /* HERO */
     .hero {
-      min-height: 100vh;
-      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 60%, #52b69a 100%);
-      display: flex;
-      align-items: center;
-      padding: 7rem 2rem 4rem;
-      position: relative;
-      overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 110px 8vw 80px; background: var(--lavanda-ultra);
+      position: relative; overflow: hidden;
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      right: 0; top: 0; bottom: 0;
-      width: 45%;
-      background: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80&fit=crop') center/cover;
-      opacity: 0.15;
+    .hero-circle1 {
+      position: absolute; top: -15vw; right: -10vw;
+      width: 50vw; height: 50vw; border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,107,158,.12) 0%, transparent 70%);
     }
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      pointer-events: none;
+    .hero-circle2 {
+      position: absolute; bottom: -10vw; left: -10vw;
+      width: 40vw; height: 40vw; border-radius: 50%;
+      background: radial-gradient(circle, rgba(243,232,248,.8) 0%, transparent 70%);
     }
-    .blob-1 { width: 300px; height: 300px; top: -50px; left: -80px; }
-    .blob-2 { width: 200px; height: 200px; bottom: 80px; right: 100px; }
+    .hero-split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 2; width: 100%; }
+    .hero-text { }
+    .hero-sup {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .7rem; font-weight: 600; letter-spacing: 4px; color: var(--lavanda); text-transform: uppercase; margin-bottom: 28px;
+      opacity: 0; transition: opacity .8s .1s, transform .8s .1s; transform: translateX(-16px);
+    }
+    .hero-sup::before { content: ''; width: 20px; height: 1px; background: var(--lavanda); }
+    .hero-h1 {
+      font-family: 'Libre Baskerville', serif; font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+      font-weight: 700; line-height: 1.15; color: var(--negro-suave); margin-bottom: 24px;
+      opacity: 0; transition: opacity 1s .3s, transform 1s .3s; transform: translateX(-20px);
+    }
+    .hero-h1 span { color: var(--lavanda); }
+    .hero-p {
+      font-size: 1.02rem; color: var(--gris-texto); line-height: 1.85; max-width: 440px; margin-bottom: 44px;
+      opacity: 0; transition: opacity .8s .5s, transform .8s .5s; transform: translateX(-14px);
+    }
+    .hero-actions {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      opacity: 0; transition: opacity .7s .65s;
+    }
+    .btn-lav {
+      background: var(--lavanda); color: #fff; padding: 14px 34px;
+      font-family: 'Open Sans', sans-serif; font-size: .88rem; font-weight: 600;
+      border-radius: 50px; text-decoration: none; transition: all .3s;
+    }
+    .btn-lav:hover { background: var(--lavanda-claro); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(124,107,158,.3); }
+    .btn-ghost-lav {
+      border: 1.5px solid var(--lavanda); color: var(--lavanda); padding: 14px 34px;
+      font-family: 'Open Sans', sans-serif; font-size: .88rem; font-weight: 600;
+      border-radius: 50px; text-decoration: none; transition: all .3s;
+    }
+    .btn-ghost-lav:hover { background: var(--lavanda-palido); }
+    .hero-visual { position: relative; }
+    .hero-photo {
+      width: 100%; height: 500px; object-fit: cover; display: block;
+      border-radius: 40% 60% 50% 50% / 45% 45% 55% 55%;
+      box-shadow: 0 20px 60px rgba(124,107,158,.2);
+    }
+    .rating-pill {
+      position: absolute; bottom: 40px; left: -28px;
+      background: var(--blanco); border-radius: 16px; padding: 16px 20px;
+      box-shadow: 0 8px 32px rgba(124,107,158,.18);
+      animation: floatPill 3.5s ease-in-out infinite;
+    }
+    .rp-row { display: flex; align-items: center; gap: 10px; }
+    .rp-num { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--lavanda); }
+    .rp-right .rp-stars { color: #c8922a; font-size: .8rem; }
+    .rp-right .rp-lbl { font-size: .65rem; font-weight: 600; letter-spacing: 1px; color: var(--gris-texto); text-transform: uppercase; margin-top: 2px; }
+    @keyframes floatPill { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);} }
+    .hero.loaded .hero-sup,
+    .hero.loaded .hero-h1,
+    .hero.loaded .hero-p,
+    .hero.loaded .hero-actions { opacity: 1; transform: translateX(0); }
 
-    .hero-inner {
-      max-width: 1080px; margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3rem; align-items: center;
-      width: 100%;
-    }
+    /* SECTION */
+    .section { padding: 88px 8vw; }
+    .section-alt { background: var(--gris-claro); }
+    .sec-label { font-size: .68rem; font-weight: 700; letter-spacing: 4px; color: var(--lavanda); text-transform: uppercase; margin-bottom: 12px; }
+    .sec-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.9rem, 3.5vw, 3rem); font-weight: 700; color: var(--negro-suave); line-height: 1.2; margin-bottom: 16px; }
+    .sec-title em { color: var(--lavanda); font-style: italic; }
+    .lav-bar { width: 40px; height: 2px; background: var(--lavanda); border-radius: 2px; margin: 0 0 48px; }
 
-    .hero-tag {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: var(--white);
-      font-size: 0.72rem; font-weight: 600;
-      letter-spacing: 2px; text-transform: uppercase;
-      padding: 0.45rem 1.2rem;
-      border-radius: 50px;
-      margin-bottom: 1.5rem;
-    }
+    /* ABOUT */
+    .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .about-img { width: 100%; height: 440px; object-fit: cover; border-radius: 12px; display: block; box-shadow: 0 12px 40px rgba(124,107,158,.15); }
+    .about-body p { color: var(--gris-texto); line-height: 1.95; margin-bottom: 16px; font-size: .97rem; }
+    .about-kpis { display: flex; gap: 32px; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(124,107,158,.15); }
+    .ak-val { font-family: 'Libre Baskerville', serif; font-size: 2.8rem; color: var(--lavanda); display: block; line-height: 1; }
+    .ak-lbl { font-size: .65rem; font-weight: 600; letter-spacing: 2px; color: var(--gris-texto); text-transform: uppercase; margin-top: 6px; }
 
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 700; line-height: 1.2;
-      color: var(--white); margin-bottom: 0.8rem;
+    /* SERVICIOS */
+    .srv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+    .srv-card {
+      background: var(--blanco); border-radius: 16px; padding: 30px 24px;
+      box-shadow: 0 2px 14px rgba(124,107,158,.07); transition: all .4s;
+      border: 1px solid rgba(124,107,158,.08); text-align: center;
     }
-    .hero-tagline { font-size: 1.05rem; color: rgba(255,255,255,0.88); margin-bottom: 0.6rem; font-weight: 300; }
-    .hero-sub { font-size: 0.97rem; color: rgba(255,255,255,0.7); font-style: italic; margin-bottom: 1.8rem; }
+    .srv-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(124,107,158,.16); border-color: rgba(124,107,158,.2); }
+    .srv-icon-wrap { width: 56px; height: 56px; background: var(--lavanda-palido); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    .srv-name { font-family: 'Libre Baskerville', serif; font-size: 1.1rem; font-weight: 700; color: var(--negro-suave); margin-bottom: 8px; }
+    .srv-desc { color: var(--gris-texto); font-size: .86rem; line-height: 1.75; }
 
-    .hero-pill {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(255,255,255,0.18);
-      color: var(--white);
-      padding: 0.5rem 1.2rem; border-radius: 50px;
-      font-weight: 600; font-size: 0.9rem;
-      margin-bottom: 2rem;
-    }
+    /* TRUST */
+    .trust-section { background: var(--lavanda); padding: 72px 8vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 48px; }
+    .ts-left { text-align: center; }
+    .ts-num { font-family: 'Libre Baskerville', serif; font-size: 7rem; font-weight: 700; color: #fff; line-height: 1; display: block; }
+    .ts-stars { font-size: 1.5rem; margin-top: 4px; }
+    .ts-sub { font-size: .7rem; font-weight: 600; letter-spacing: 3px; color: rgba(255,255,255,.65); text-transform: uppercase; margin-top: 8px; }
+    .ts-reviews { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
+    .ts-item { text-align: center; background: rgba(255,255,255,.12); border-radius: 12px; padding: 20px 28px; }
+    .ts-val { font-family: 'Libre Baskerville', serif; font-size: 2.4rem; color: #fff; font-weight: 700; display: block; line-height: 1; }
+    .ts-lbl { font-size: .65rem; font-weight: 600; letter-spacing: 2px; color: rgba(255,255,255,.65); text-transform: uppercase; margin-top: 6px; }
 
-    .btn-white {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      background: var(--white);
-      color: var(--teal-dark);
-      text-decoration: none; font-weight: 700; font-size: 0.9rem;
-      padding: 1rem 2rem; border-radius: 50px;
-      transition: all 0.3s;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
-
-    .hero-card {
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 20px;
-      padding: 2.5rem;
-      text-align: center;
-      color: var(--white);
-      z-index: 1;
-    }
-    .hero-card-num {
-      font-size: 4rem; font-weight: 700; line-height: 1;
-      display: block; margin-bottom: 0.3rem;
-    }
-    .hero-card-stars { font-size: 1.6rem; color: #ffd700; margin: 0.5rem 0; }
-    .hero-card-label { font-size: 0.82rem; opacity: 0.85; font-weight: 500; }
-    .hero-card-sub { font-size: 0.75rem; opacity: 0.65; margin-top: 0.5rem; }
-
-    /* SHARED */
-    section { padding: 5rem 1.5rem; }
-    .container { max-width: 1080px; margin: 0 auto; }
-    .section-label {
-      display: block;
-      font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 3px; text-transform: uppercase;
-      color: var(--teal); margin-bottom: 0.6rem;
-    }
-    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--text); line-height: 1.3; }
-    .section-title span { color: var(--teal); }
-    .section-bar { width: 46px; height: 3px; background: var(--teal); border-radius: 2px; margin-top: 1rem; }
-    .section-header { margin-bottom: 3rem; }
-    .section-header.center { text-align: center; }
-    .section-header.center .section-bar { margin: 1rem auto 0; }
-
-    /* SERVICES */
-    .services { background: var(--bg); }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 1.5rem;
-    }
-    .service-card {
-      background: var(--white);
-      border-radius: 16px; padding: 2rem;
-      box-shadow: 0 4px 20px rgba(10,147,150,0.07);
-      border: 1px solid rgba(10,147,150,0.1);
-      transition: all 0.3s;
-    }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 35px rgba(10,147,150,0.15); border-color: rgba(10,147,150,0.3); }
-    .service-icon-wrap {
-      width: 54px; height: 54px;
-      background: rgba(10,147,150,0.1);
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.2rem;
-    }
-    .service-icon-wrap svg { width: 26px; height: 26px; color: var(--teal); }
-    .service-name { font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
-    .service-desc { font-size: 0.88rem; color: var(--text-2); line-height: 1.65; }
-
-    /* TRUST BAND */
-    .trust-band { background: linear-gradient(135deg, var(--teal-dark), var(--teal)); padding: 3rem 1.5rem; }
-    .trust-inner {
-      max-width: 1080px; margin: 0 auto;
-      display: flex; justify-content: center; align-items: center;
-      gap: 0; flex-wrap: wrap;
-    }
-    .trust-item { text-align: center; color: var(--white); padding: 1.2rem 3rem; flex: 1; min-width: 150px; }
-    .trust-num { font-size: 3rem; font-weight: 700; display: block; line-height: 1; }
-    .trust-label { font-size: 0.82rem; opacity: 0.85; margin-top: 0.3rem; }
-    .trust-div { width: 1px; height: 55px; background: rgba(255,255,255,0.2); flex-shrink: 0; }
-
-    /* TESTIMONIALS */
-    .testimonials { background: var(--white); }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.5rem;
-    }
+    /* TESTIMONIOS */
+    .testi-layout { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
     .testi-card {
-      background: var(--bg-2);
-      border-radius: 16px; padding: 2rem;
-      border-left: 4px solid var(--teal);
+      background: var(--blanco); border-radius: 16px; padding: 28px 22px;
+      box-shadow: 0 2px 12px rgba(124,107,158,.07); border: 1px solid rgba(124,107,158,.08);
     }
-    .testi-stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.8rem; }
-    .testi-text { font-size: 0.95rem; line-height: 1.75; color: var(--text-2); font-style: italic; margin-bottom: 1.4rem; }
-    .testi-author { display: flex; align-items: center; gap: 0.8rem; }
-    .testi-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 1rem; color: var(--white);
-    }
-    .testi-name { font-weight: 600; color: var(--text); }
+    .testi-star { color: #c8922a; font-size: .85rem; margin-bottom: 12px; }
+    .testi-text { color: var(--gris-texto); font-style: italic; line-height: 1.85; font-size: .91rem; margin-bottom: 16px; }
+    .testi-name { font-family: 'Libre Baskerville', serif; font-size: .9rem; font-weight: 700; color: var(--lavanda); }
 
-    /* GALLERY */
-    .gallery { background: var(--bg); }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
-    }
-    .gallery-item { aspect-ratio: 4/3; overflow: hidden; border-radius: 12px; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
-    .gallery-item:hover img { transform: scale(1.05); }
+    /* GALERÍA */
+    .gal-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 14px; }
+    .gal-cell { border-radius: 12px; overflow: hidden; }
+    .gal-cell img { width: 100%; height: 260px; object-fit: cover; display: block; transition: transform .5s, filter .5s; filter: saturate(.85); }
+    .gal-cell:hover img { transform: scale(1.05); filter: saturate(1.1); }
 
-    /* LOCATION */
-    .location { background: var(--white); }
-    .location-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem; align-items: start;
+    /* UBICACIÓN */
+    .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .loc-map iframe { width: 100%; height: 360px; border: none; border-radius: 12px; display: block; box-shadow: 0 8px 28px rgba(124,107,158,.12); }
+    .loc-list { }
+    .loc-row { display: flex; gap: 14px; margin-bottom: 24px; align-items: flex-start; padding-bottom: 20px; border-bottom: 1px solid rgba(124,107,158,.1); }
+    .loc-icon { width: 36px; height: 36px; background: var(--lavanda-palido); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--lavanda); }
+    .loc-lbl { font-size: .65rem; font-weight: 700; letter-spacing: 2px; color: var(--lavanda); text-transform: uppercase; margin-bottom: 4px; }
+    .loc-val { color: var(--gris-texto); font-size: .93rem; line-height: 1.65; }
+    .loc-val a { color: var(--negro-suave); text-decoration: none; }
+    .maps-link {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 10px;
+      background: var(--lavanda); color: #fff; padding: 11px 22px; border-radius: 50px;
+      font-family: 'Open Sans', sans-serif; font-size: .82rem; font-weight: 600;
+      text-decoration: none; transition: all .3s;
     }
-    .map-wrap {
-      border-radius: 16px; overflow: hidden;
-      border: 2px solid rgba(10,147,150,0.15);
-      height: 370px;
-      box-shadow: 0 4px 20px rgba(10,147,150,0.08);
-    }
-    .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
-    .location-info h3 { font-size: 1.7rem; font-weight: 700; color: var(--text); margin-bottom: 1.8rem; }
-    .loc-row { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1.2rem; color: var(--text-2); font-size: 0.95rem; line-height: 1.5; }
-    .loc-row svg { color: var(--teal); flex-shrink: 0; margin-top: 2px; }
-    .btn-maps {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--teal); color: var(--white);
-      text-decoration: none; padding: 0.85rem 1.8rem;
-      border-radius: 50px; font-size: 0.85rem; font-weight: 600;
-      margin-top: 1rem; transition: all 0.3s;
-    }
-    .btn-maps:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .maps-link:hover { background: var(--lavanda-claro); }
 
-    /* CONTACT */
-    .contact { background: var(--bg); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.2rem;
-    }
-    .contact-card {
-      background: var(--white);
-      border-radius: 14px; padding: 1.8rem;
-      text-align: center;
-      box-shadow: 0 3px 15px rgba(10,147,150,0.07);
-      transition: all 0.3s;
-    }
-    .contact-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(10,147,150,0.15); }
-    .contact-icon { width: 40px; height: 40px; color: var(--teal); margin: 0 auto 0.8rem; }
-    .contact-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 0.4rem; }
-    .contact-value { font-size: 1rem; color: var(--text); font-weight: 500; }
-    .contact-link { color: var(--text); text-decoration: none; transition: color 0.2s; }
-    .contact-link:hover { color: var(--teal); }
-
-    footer {
-      background: var(--teal-dark);
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-    }
-    .footer-name { font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
-    .footer-sub { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
-
+    /* CONTACTO */
+    .ct-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .ct-card { background: var(--lavanda-ultra); border-radius: 12px; padding: 28px 22px; border: 1px solid rgba(124,107,158,.12); }
+    .ct-lbl { font-size: .65rem; font-weight: 700; letter-spacing: 3px; color: var(--lavanda); text-transform: uppercase; margin-bottom: 12px; }
+    .ct-val { color: var(--gris-texto); font-size: .93rem; line-height: 1.7; }
+    .ct-val a { color: var(--negro-suave); text-decoration: none; font-weight: 600; }
     .wa-btn {
-      position: fixed; bottom: 1.8rem; right: 1.8rem;
-      background: #25D366; width: 62px; height: 62px;
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.45);
-      z-index: 999; transition: all 0.3s ease;
+      display: inline-block; margin-top: 14px; background: #25D366; color: #fff;
+      padding: 10px 22px; border-radius: 50px; font-family: 'Open Sans', sans-serif;
+      font-size: .82rem; font-weight: 600; text-decoration: none; transition: background .3s;
     }
-    .wa-btn:hover { transform: scale(1.12); }
-    .wa-btn svg { width: 32px; height: 32px; }
+    .wa-btn:hover { background: #1da851; }
 
-    .fade-up { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 768px) {
-      nav { padding: 0.8rem 1rem; }
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-card { display: none; }
-      .location-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .trust-div { display: none; }
+    /* FOOTER */
+    footer {
+      background: var(--negro-suave); padding: 36px 8vw;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
     }
-    @media (max-width: 480px) {
-      section { padding: 3.5rem 1rem; }
-      .gallery-grid { grid-template-columns: 1fr; }
+    .f-brand { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: rgba(255,255,255,.85); }
+    .f-info { color: rgba(255,255,255,.35); font-size: .78rem; }
+
+    /* WA FLOAT */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 58px; height: 58px; background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; box-shadow: 0 4px 18px rgba(37,211,102,.4);
+      animation: softFloat 3s ease-in-out infinite;
+    }
+    .wa-float:hover { background: #1da851; animation: none; transform: scale(1.1); }
+    @keyframes softFloat { 0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(-5px) scale(1.03);} }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.on { opacity: 1; transform: translateY(0); }
+
+    @media(max-width:900px) {
+      .hero-split, .about-layout, .loc-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .testi-layout { grid-template-columns: 1fr; }
+    }
+    @media(max-width:600px) {
+      .section { padding: 60px 5vw; }
+      .srv-grid, .gal-grid, .ct-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-brand">Psic. <span>Elizabeth Guerra</span></div>
-    <a href="https://wa.me/51980441411?text=Hola,%20quisiera%20agendar%20una%20consulta%20psicológica" class="nav-cta">Agendar consulta</a>
-  </nav>
+<nav>
+  <div class="nav-logo">Elizabeth Guerra · Psicóloga</div>
+  <a href="https://wa.me/51980441411" class="nav-cta" target="_blank">Agendar cita</a>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="hero-inner">
-      <div>
-        <div class="hero-tag">🧠 Psicóloga · Villa El Salvador</div>
-        <h1>Consultorio Psicológico<br>Elizabeth Guerra</h1>
-        <p class="hero-tagline">Acompañamiento profesional para tu bienestar emocional</p>
-        <p class="hero-sub">"El bienestar mental es tan importante como el físico — te ayudo a lograrlo"</p>
-        <div class="hero-pill">⭐ 5.0 · 11 reseñas verificadas en Google</div>
-        <a href="https://wa.me/51980441411?text=Hola,%20quisiera%20agendar%20una%20consulta%20psicológica" class="btn-white">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
-          Agenda tu consulta
-        </a>
-      </div>
-      <div class="hero-card fade-up">
-        <span class="hero-card-num">5.0</span>
-        <div class="hero-card-stars">★★★★★</div>
-        <div class="hero-card-label">Calificación perfecta en Google</div>
-        <div class="hero-card-sub">11 reseñas verificadas</div>
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-circle1"></div>
+  <div class="hero-circle2"></div>
+  <div class="hero-split">
+    <div class="hero-text">
+      <div class="hero-sup">Psicología · Villa El Salvador</div>
+      <h1 class="hero-h1">Encuentra tu<br>bienestar <span>emocional</span></h1>
+      <p class="hero-p">Consultorio Psicológico Elizabeth Guerra — un espacio de escucha genuina, respeto y acompañamiento profesional. Porque tu salud mental importa tanto como cualquier otra.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/51980441411" class="btn-lav" target="_blank">Solicitar cita</a>
+        <a href="#servicios" class="btn-ghost-lav">Ver especialidades</a>
       </div>
     </div>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section class="services" id="servicios">
-    <div class="container">
-      <div class="section-header center fade-up">
-        <span class="section-label">Especialidades</span>
-        <h2 class="section-title">Servicios de <span>Psicología</span></h2>
-        <div class="section-bar"></div>
-      </div>
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&q=80&fit=crop" alt="Consultorio psicológico" class="hero-photo">
+      <div class="rating-pill">
+        <div class="rp-row">
+          <div class="rp-num" id="heroNum">5.0</div>
+          <div class="rp-right">
+            <div class="rp-stars">★★★★★</div>
+            <div class="rp-lbl">11 reseñas</div>
           </div>
-          <div class="service-name">Terapia Individual</div>
-          <p class="service-desc">Espacio seguro para trabajar ansiedad, depresión, autoestima, duelo y estrés laboral.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <div class="service-name">Terapia de Pareja</div>
-          <p class="service-desc">Herramientas para comunicarse mejor, resolver conflictos y fortalecer la relación.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div class="service-name">Terapia Familiar</div>
-          <p class="service-desc">Apoyo para familias que atraviesan conflictos, crisis o cambios importantes.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
-          </div>
-          <div class="service-name">Psicología Infantil</div>
-          <p class="service-desc">Atención especializada para niños: conducta, aprendizaje, emociones y desarrollo.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19V6l12-3v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="15" r="3"/></svg>
-          </div>
-          <div class="service-name">Manejo del Estrés</div>
-          <p class="service-desc">Técnicas cognitivas y conductuales para manejar el estrés y mejorar tu calidad de vida.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
-          </div>
-          <div class="service-name">Evaluaciones Psicológicas</div>
-          <p class="service-desc">Diagnóstico clínico y orientación terapéutica basados en herramientas validadas.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- TRUST BAND -->
-  <div class="trust-band">
-    <div class="trust-inner">
-      <div class="trust-item fade-up">
-        <span class="trust-num">5.0</span>
-        <div class="trust-label">★ Calificación perfecta</div>
-      </div>
-      <div class="trust-div"></div>
-      <div class="trust-item fade-up">
-        <span class="trust-num">11</span>
-        <div class="trust-label">Reseñas verificadas</div>
-      </div>
-      <div class="trust-div"></div>
-      <div class="trust-item fade-up">
-        <span class="trust-num">100%</span>
-        <div class="trust-label">Confidencialidad garantizada</div>
+<!-- SOBRE -->
+<section class="section reveal">
+  <div class="about-layout">
+    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&fit=crop" alt="Espacio terapéutico sereno" class="about-img">
+    <div class="about-body">
+      <p class="sec-label">Sobre el consultorio</p>
+      <h2 class="sec-title">Un espacio para<br>ser <em>escuchado</em></h2>
+      <div class="lav-bar"></div>
+      <p>El Consultorio Psicológico Elizabeth Guerra lleva años acompañando a personas de Villa El Salvador en sus procesos emocionales. Cada sesión es un espacio de confianza donde podés hablar con total libertad.</p>
+      <p>La Psic. Elizabeth Guerra atiende con un enfoque humanista e integrador, adaptando las herramientas terapéuticas a las necesidades de cada persona. Porque no hay dos procesos iguales.</p>
+      <div class="about-kpis">
+        <div>
+          <span class="ak-val">5.0</span>
+          <div class="ak-lbl">Puntuación Google</div>
+        </div>
+        <div>
+          <span class="ak-val" data-count="11">0</span>
+          <div class="ak-lbl">Reseñas verificadas</div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- TESTIMONIOS -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header center fade-up">
-        <span class="section-label">Pacientes satisfechos</span>
-        <h2 class="section-title">Historias de <span>transformación</span></h2>
-        <div class="section-bar"></div>
+<!-- SERVICIOS -->
+<section class="section section-alt reveal" id="servicios">
+  <p class="sec-label">Especialidades</p>
+  <h2 class="sec-title">¿En qué puedo <em>ayudarte</em>?</h2>
+  <div class="lav-bar"></div>
+  <div class="srv-grid">
+    <div class="srv-card">
+      <div class="srv-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c6b9e" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+      <div class="srv-name">Terapia Individual</div>
+      <div class="srv-desc">Proceso personalizado para trabajar ansiedad, depresión, autoestima, duelo y cualquier situación que te genere malestar.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c6b9e" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <div class="srv-name">Psicología Familiar</div>
+      <div class="srv-desc">Mejora la comunicación y las dinámicas dentro del hogar. Para familias que quieren crecer juntas.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c6b9e" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+      <div class="srv-name">Atención Infantil</div>
+      <div class="srv-desc">Apoyo especializado para niños y adolescentes. Conducta, emociones, habilidades sociales y desarrollo.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c6b9e" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
+      <div class="srv-name">Ansiedad y Crisis</div>
+      <div class="srv-desc">Técnicas concretas para manejar la ansiedad, ataques de pánico y situaciones de crisis emocional.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c6b9e" stroke-width="2"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg></div>
+      <div class="srv-name">Procesos de Duelo</div>
+      <div class="srv-desc">Acompañamiento respetuoso para atravesar pérdidas y encontrar el camino hacia la aceptación.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c6b9e" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="srv-name">Fortalecimiento Personal</div>
+      <div class="srv-desc">Autoestima, límites y crecimiento personal. Herramientas para vivir con más seguridad y bienestar.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust-section reveal">
+  <div class="ts-left">
+    <span class="ts-num" id="ratingCount">0.0</span>
+    <div class="ts-stars">★★★★★</div>
+    <div class="ts-sub">Puntuación perfecta en Google</div>
+  </div>
+  <div class="ts-reviews">
+    <div class="ts-item">
+      <span class="ts-val" data-count="11">0</span>
+      <div class="ts-lbl">Reseñas Google</div>
+    </div>
+    <div class="ts-item">
+      <span class="ts-val">100%</span>
+      <div class="ts-lbl">Satisfacción</div>
+    </div>
+    <div class="ts-item">
+      <span class="ts-val">★ 5</span>
+      <div class="ts-lbl">Puntuación</div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIOS -->
+<section class="section section-alt reveal">
+  <p class="sec-label">Lo que dicen</p>
+  <h2 class="sec-title">Experiencias <em>reales</em></h2>
+  <div class="lav-bar"></div>
+  <div class="testi-layout">
+    <div class="testi-card">
+      <div class="testi-star">★★★★★</div>
+      <p class="testi-text">"La Psic. Elizabeth tiene una capacidad increíble para hacerte sentir segura. Nunca me sentí juzgada. Después de meses de terapia puedo decir que soy una persona diferente, más fuerte."</p>
+      <div class="testi-name">— Luisa Paredes M.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-star">★★★★★</div>
+      <p class="testi-text">"Llevé a mi adolescente que tenía muchos problemas emocionales. El proceso fue gradual y muy profesional. La doctora supo cómo conectar con él de una manera que nosotros como padres no podíamos."</p>
+      <div class="testi-name">— Ana Quispe T.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-star">★★★★★</div>
+      <p class="testi-text">"Vine por ansiedad y encontré mucho más que técnicas. Encontré a una profesional que realmente se preocupa por el bienestar de sus pacientes. Llevo 6 meses asistiendo y no lo cambio."</p>
+      <div class="testi-name">— Jorge Mamani R.</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="section reveal">
+  <p class="sec-label">El entorno</p>
+  <h2 class="sec-title">Un espacio <em>para ti</em></h2>
+  <div class="lav-bar"></div>
+  <div class="gal-grid">
+    <div class="gal-cell">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop" alt="Psicóloga profesional">
+    </div>
+    <div class="gal-cell">
+      <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&q=80&fit=crop" alt="Sesión terapéutica">
+    </div>
+    <div class="gal-cell">
+      <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80&fit=crop" alt="Ambiente tranquilo">
+    </div>
+  </div>
+</section>
+
+<!-- UBICACIÓN -->
+<section class="section section-alt reveal">
+  <p class="sec-label">Ubicación</p>
+  <h2 class="sec-title">Cómo llegarte</h2>
+  <div class="lav-bar"></div>
+  <div class="loc-grid">
+    <div class="loc-map">
+      <iframe src="https://maps.google.com/maps?q=-12.209467,-76.9433742&output=embed" allowfullscreen loading="lazy" title="Consultorio Elizabeth Guerra"></iframe>
+    </div>
+    <div class="loc-list">
+      <div class="loc-row">
+        <div class="loc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="loc-lbl">Dirección</div><div class="loc-val">Villa El Salvador 15831, Lima</div></div>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card fade-up">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">La psicóloga Elizabeth es una profesional excepcional. Me ayudó a entender mis emociones y a manejar la ansiedad de una forma que nunca había logrado sola. Muy agradecida.</p>
-          <div class="testi-author">
-            <div class="testi-avatar">V</div>
-            <div><div class="testi-name">Valeria Tarazona</div></div>
-          </div>
-        </div>
-        <div class="testi-card fade-up">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">Mi esposo y yo venimos juntos a terapia de pareja y ha sido transformador. Elizabeth tiene mucha empatía y sabe guiar las conversaciones difíciles con mucha habilidad.</p>
-          <div class="testi-author">
-            <div class="testi-avatar">A</div>
-            <div><div class="testi-name">Ana Flores</div></div>
-          </div>
-        </div>
-        <div class="testi-card fade-up">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">Llevé a mi hijo de 12 años por problemas de conducta en el colegio. En tres semanas noté un cambio real. La doctora es muy paciente y cercana con los jóvenes.</p>
-          <div class="testi-author">
-            <div class="testi-avatar">N</div>
-            <div><div class="testi-name">Nancy Quispe</div></div>
-          </div>
-        </div>
+      <div class="loc-row">
+        <div class="loc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 013-8.63A2 2 0 017.91 2h0a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div><div class="loc-lbl">Teléfono</div><div class="loc-val"><a href="tel:980441411">980 441 411</a></div></div>
+      </div>
+      <div class="loc-row">
+        <div class="loc-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><div class="loc-lbl">Horario</div><div class="loc-val">Lunes a Viernes: 8:00 am – 7:00 pm<br>Sábados: 9:00 am – 1:00 pm</div></div>
+      </div>
+      <a href="https://www.google.com/maps/place/Consultorio+Psicologico+Elizabeth+Guerra/@-12.209467,-76.9433742,17z" class="maps-link" target="_blank">Ver en Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section reveal">
+  <p class="sec-label">Contacto</p>
+  <h2 class="sec-title">Agenda tu <em>primera cita</em></h2>
+  <div class="lav-bar"></div>
+  <div class="ct-row">
+    <div class="ct-card">
+      <div class="ct-lbl">WhatsApp</div>
+      <div class="ct-val">
+        Escribenos y coordino tu primera cita.<br>
+        <a href="https://wa.me/51980441411" class="wa-btn" target="_blank">💬 Escribir por WhatsApp</a>
       </div>
     </div>
-  </section>
-
-  <!-- GALERÍA -->
-  <section class="gallery">
-    <div class="container">
-      <div class="section-header center fade-up">
-        <span class="section-label">El espacio de consulta</span>
-        <h2 class="section-title">Un ambiente <span>cálido y privado</span></h2>
-        <div class="section-bar"></div>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=80&fit=crop" alt="Consultorio psicológico">
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=700&q=80&fit=crop" alt="Terapia psicológica">
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=700&q=80&fit=crop" alt="Bienestar emocional">
-        </div>
-      </div>
+    <div class="ct-card">
+      <div class="ct-lbl">Teléfono</div>
+      <div class="ct-val"><a href="tel:980441411">980 441 411</a></div>
     </div>
-  </section>
-
-  <!-- UBICACIÓN -->
-  <section class="location">
-    <div class="container">
-      <div class="location-grid">
-        <div class="fade-up">
-          <div class="section-header">
-            <span class="section-label">Cómo llegar</span>
-            <h2 class="section-title">Estamos en <span>Villa El Salvador</span></h2>
-            <div class="section-bar"></div>
-          </div>
-          <div class="loc-row">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Villa El Salvador 15831, Lima</span>
-          </div>
-          <div class="loc-row">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            <span>980 441 411</span>
-          </div>
-          <div class="loc-row">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Lunes a Viernes: 9:00 am – 7:00 pm<br>Sábados: 9:00 am – 1:00 pm</span>
-          </div>
-          <a href="https://www.google.com/maps/place/Consultorio+Psicologico+Elizabeth+Guerra/@-12.209467,-76.9433742,17z" target="_blank" class="btn-maps">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Ver en Google Maps
-          </a>
-        </div>
-        <div class="fade-up">
-          <div class="map-wrap">
-            <iframe src="https://maps.google.com/maps?q=-12.209467,-76.9433742&output=embed" allowfullscreen loading="lazy" title="Consultorio Elizabeth Guerra"></iframe>
-          </div>
-        </div>
-      </div>
+    <div class="ct-card">
+      <div class="ct-lbl">Ubicación</div>
+      <div class="ct-val">Villa El Salvador 15831<br>Lima, Perú</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACTO -->
-  <section class="contact">
-    <div class="container">
-      <div class="section-header center fade-up">
-        <span class="section-label">Contáctame</span>
-        <h2 class="section-title">Escríbeme, <span>estoy aquí</span></h2>
-        <div class="section-bar"></div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card fade-up">
-          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div class="contact-label">Teléfono</div>
-          <div class="contact-value"><a href="tel:+51980441411" class="contact-link">980 441 411</a></div>
-        </div>
-        <div class="contact-card fade-up">
-          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-          <div class="contact-label">WhatsApp</div>
-          <div class="contact-value"><a href="https://wa.me/51980441411?text=Hola,%20quisiera%20agendar%20una%20consulta" class="contact-link">Escríbeme</a></div>
-        </div>
-        <div class="contact-card fade-up">
-          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="contact-label">Ubicación</div>
-          <div class="contact-value">Villa El Salvador<br>Lima, Perú</div>
-        </div>
-        <div class="contact-card fade-up">
-          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="contact-label">Horario</div>
-          <div class="contact-value">Lun–Vie 9am–7pm<br>Sáb 9am–1pm</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer>
+  <div class="f-brand">Consultorio Psicológico Elizabeth Guerra</div>
+  <div class="f-info">Psicóloga · Villa El Salvador · Lima, Perú</div>
+</footer>
 
-  <footer>
-    <div class="footer-name">Consultorio Psicológico Elizabeth Guerra</div>
-    <div class="footer-sub">Psicóloga Clínica · Villa El Salvador, Lima · Perú</div>
-  </footer>
+<a href="https://wa.me/51980441411" class="wa-float" target="_blank" aria-label="WhatsApp Elizabeth Guerra">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
-  <a href="https://wa.me/51980441411?text=Hola,%20quisiera%20agendar%20una%20consulta%20psicológica" class="wa-btn" title="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+<script>
+  document.getElementById('hero').classList.add('loaded');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-count]').forEach(el=>countUp(el,+el.dataset.count));
+      const rc=e.target.querySelector('#ratingCount'); if(rc) floatUp(rc,5.0);
+      io.unobserve(e.target);
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  function countUp(el,n){let v=0;const t=setInterval(()=>{v=Math.min(v+n/40,n);el.textContent=Math.floor(v);if(v>=n)clearInterval(t);},28);}
+  function floatUp(el,n){let v=0;const t=setInterval(()=>{v=Math.min(v+.12,n);el.textContent=v.toFixed(1);if(v>=n){el.textContent=n.toFixed(1);clearInterval(t);}},30);}
+</script>
 </body>
 </html>

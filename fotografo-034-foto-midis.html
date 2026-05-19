@@ -3,528 +3,464 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foto Midis | Estudio Fotográfico en Villa El Salvador</title>
-  <meta name="description" content="Foto Midis — Estudio de fotografía y servicios de impresión en Villa El Salvador. Fotos carnet, impresiones y más a precios accesibles. Contáctanos hoy.">
-  <meta property="og:title" content="Foto Midis | Estudio Fotográfico Villa El Salvador">
-  <meta property="og:description" content="Fotografía y servicios de impresión en Villa El Salvador. Rápido, accesible y de calidad.">
+  <meta name="description" content="Foto Midis en Villa El Salvador — Estudio de fotografía moderno, creativo y accesible. Retratos, eventos, impresiones y más. Escríbenos ahora.">
+  <meta property="og:title" content="Foto Midis | Estudio de Fotografía · Villa El Salvador">
+  <meta property="og:description" content="Tu momento merece ser bien fotografiado. Estudio fotográfico en Villa El Salvador — creativo, accesible y cercano.">
+  <title>Foto Midis | Estudio de Fotografía Villa El Salvador</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --red: #e94560;
-      --red-dark: #c62a42;
-      --dark: #0f0f1a;
-      --dark-2: #16213e;
-      --dark-3: #1a1a2e;
-      --gray: #8892b0;
-      --light: #ccd6f6;
-      --light-2: rgba(204,214,246,0.65);
-      --white: #ffffff;
-      --accent: #64ffda;
+      --naranja: #ff5722;
+      --naranja-claro: #ff7043;
+      --amarillo: #ffd600;
+      --azul-noche: #1a1a2e;
+      --azul2: #16213e;
+      --blanco: #ffffff;
+      --gris: #9a9ab0;
+      --gris-claro: #f5f5f8;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    body { background: var(--azul-noche); color: var(--blanco); font-family: 'Roboto', sans-serif; overflow-x: hidden; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark);
-      color: var(--light);
-      overflow-x: hidden;
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 18px 6vw; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(26,26,46,.96); backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--naranja);
     }
+    .nav-logo { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--blanco); }
+    .nav-logo span { color: var(--naranja); }
+    .nav-cta {
+      background: var(--naranja); color: #fff; padding: 10px 24px;
+      font-family: 'Poppins', sans-serif; font-size: .82rem; font-weight: 700;
+      border-radius: 6px; text-decoration: none; letter-spacing: .5px; transition: all .3s;
+    }
+    .nav-cta:hover { background: var(--naranja-claro); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(255,87,34,.4); }
 
     /* HERO */
     .hero {
-      min-height: 100vh;
-      background: var(--dark-3);
-      display: flex;
-      align-items: center;
-      padding: 4rem 2rem;
-      position: relative;
-      overflow: hidden;
+      min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+      padding: 110px 6vw 80px; position: relative; overflow: hidden;
     }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1400&q=80&fit=crop') center/cover no-repeat;
-      opacity: 0.08;
+    .hero-gradient {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #1a1010 80%, #2a0f00 100%);
     }
-    .hero-grid-overlay {
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(rgba(100,255,218,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(100,255,218,0.03) 1px, transparent 1px);
-      background-size: 50px 50px;
+    .hero-splash {
+      position: absolute; top: -20vw; right: -15vw;
+      width: 65vw; height: 65vw; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,87,34,.18) 0%, transparent 65%);
+      animation: splashPulse 4s ease-in-out infinite;
+    }
+    .hero-splash2 {
+      position: absolute; bottom: -20vw; left: -10vw;
+      width: 50vw; height: 50vw; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,214,0,.1) 0%, transparent 65%);
+      animation: splashPulse 5s ease-in-out infinite .5s;
+    }
+    @keyframes splashPulse { 0%,100%{opacity:1;} 50%{opacity:.6;} }
+    .hero-inner { position: relative; z-index: 2; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Poppins', sans-serif; font-size: .72rem; font-weight: 600;
+      letter-spacing: 4px; color: var(--naranja); text-transform: uppercase; margin-bottom: 24px;
+      opacity: 0; transition: opacity .7s .1s, transform .7s .1s; transform: translateY(14px);
+    }
+    .hero-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--naranja); }
+    .hero-title {
+      font-family: 'Poppins', sans-serif; font-size: clamp(3.5rem, 9vw, 10rem);
+      font-weight: 800; line-height: .9; color: var(--blanco); margin-bottom: 28px;
+      opacity: 0; transition: opacity .9s .3s, transform .9s .3s; transform: translateY(24px);
+    }
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--naranja) 0%, var(--amarillo) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-row { display: flex; align-items: flex-end; gap: 48px; flex-wrap: wrap; }
+    .hero-sub {
+      font-size: 1rem; color: var(--gris); line-height: 1.8; max-width: 400px;
+      opacity: 0; transition: opacity .8s .5s, transform .8s .5s; transform: translateY(14px);
+    }
+    .hero-cta-box {
+      flex-shrink: 0;
+      opacity: 0; transition: opacity .7s .65s;
+    }
+    .btn-gradient {
+      display: block; background: linear-gradient(135deg, var(--naranja) 0%, var(--amarillo) 100%);
+      color: #000; padding: 16px 36px; font-family: 'Poppins', sans-serif;
+      font-size: .9rem; font-weight: 700; border-radius: 8px; text-decoration: none;
+      transition: all .3s; box-shadow: 0 6px 24px rgba(255,87,34,.35); margin-bottom: 12px;
+    }
+    .btn-gradient:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 10px 32px rgba(255,87,34,.5); }
+    .btn-ghost-w {
+      display: block; text-align: center; border: 1.5px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.7); padding: 12px 36px; font-family: 'Poppins', sans-serif;
+      font-size: .85rem; font-weight: 500; border-radius: 8px; text-decoration: none; transition: all .3s;
+    }
+    .btn-ghost-w:hover { border-color: var(--naranja); color: var(--naranja); }
+    .hero.loaded .hero-tag,
+    .hero.loaded .hero-title,
+    .hero.loaded .hero-sub,
+    .hero.loaded .hero-cta-box { opacity: 1; transform: translateY(0); }
+
+    /* SECTION */
+    .section { padding: 88px 6vw; }
+    .section-alt { background: var(--azul2); }
+    .section-light { background: var(--gris-claro); color: var(--azul-noche); }
+    .sec-label { font-family: 'Poppins', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: 5px; color: var(--naranja); text-transform: uppercase; margin-bottom: 12px; }
+    .sec-title { font-family: 'Poppins', sans-serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 16px; color: inherit; }
+    .sec-title .accent { color: var(--naranja); }
+    .orange-bar { width: 44px; height: 3px; background: linear-gradient(to right, var(--naranja), var(--amarillo)); border-radius: 2px; margin: 0 0 48px; }
+
+    /* ABOUT */
+    .about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .about-photo { width: 100%; height: 440px; object-fit: cover; border-radius: 12px; display: block; }
+    .about-body { }
+    .about-body.on-light { color: var(--azul-noche); }
+    .about-body p { color: var(--gris); line-height: 1.9; margin-bottom: 16px; font-size: .97rem; }
+    .about-body.on-light p { color: #555; }
+    .feature-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+    .feature-item { display: flex; align-items: center; gap: 12px; font-size: .95rem; color: var(--blanco); }
+    .feature-dot { width: 8px; height: 8px; background: var(--naranja); border-radius: 50%; flex-shrink: 0; }
+
+    /* SERVICIOS */
+    .srv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+    .srv-card {
+      background: rgba(255,255,255,.04); border-radius: 12px; padding: 32px 24px;
+      border: 1px solid rgba(255,255,255,.07); transition: all .35s; position: relative; overflow: hidden;
+    }
+    .srv-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(to right, var(--naranja), var(--amarillo));
+      transform: scaleX(0); transform-origin: left; transition: transform .4s;
+    }
+    .srv-card:hover { background: rgba(255,87,34,.05); border-color: rgba(255,87,34,.2); transform: translateY(-4px); }
+    .srv-card:hover::after { transform: scaleX(1); }
+    .srv-icon { width: 44px; height: 44px; background: rgba(255,87,34,.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .srv-name { font-family: 'Poppins', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--blanco); margin-bottom: 8px; }
+    .srv-desc { color: var(--gris); font-size: .86rem; line-height: 1.75; }
+
+    /* DIFERENCIADORES */
+    .diff-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .diff-card {
+      background: linear-gradient(135deg, rgba(255,87,34,.12) 0%, rgba(255,214,0,.06) 100%);
+      border-radius: 12px; padding: 32px 24px; text-align: center;
+      border: 1px solid rgba(255,87,34,.15);
+    }
+    .diff-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .diff-title { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 700; color: var(--blanco); margin-bottom: 8px; }
+    .diff-desc { color: var(--gris); font-size: .86rem; line-height: 1.7; }
+
+    /* GALERÍA */
+    .gal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+    .gal-cell { overflow: hidden; border-radius: 10px; position: relative; height: 280px; }
+    .gal-cell img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .55s, filter .55s; filter: brightness(.85) saturate(.9); }
+    .gal-cell:hover img { transform: scale(1.08); filter: brightness(1) saturate(1.2); }
+    .gal-cell::after {
+      content: ''; position: absolute; inset: 0; border-radius: 10px;
+      background: linear-gradient(to top, rgba(26,26,46,.5) 0%, transparent 50%);
       pointer-events: none;
     }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 100px;
-      background: linear-gradient(to top, var(--dark), transparent);
-    }
 
-    .hero-inner {
-      max-width: 1080px; margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem; align-items: center;
-      width: 100%; z-index: 1;
-    }
+    /* TESTIMONIOS */
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .testi-card { background: rgba(255,255,255,.04); border-radius: 12px; padding: 28px 22px; border: 1px solid rgba(255,87,34,.1); transition: border-color .3s; }
+    .testi-card:hover { border-color: rgba(255,87,34,.3); }
+    .testi-stars { color: var(--amarillo); font-size: .85rem; margin-bottom: 12px; }
+    .testi-text { color: var(--gris); font-style: italic; line-height: 1.85; font-size: .91rem; margin-bottom: 16px; }
+    .testi-name { font-family: 'Poppins', sans-serif; font-size: .8rem; font-weight: 600; color: var(--naranja); }
 
-    .hero-overline {
-      font-size: 0.72rem; font-weight: 700;
-      letter-spacing: 4px; text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.2rem;
-      display: flex; align-items: center; gap: 0.6rem;
+    /* UBICACIÓN */
+    .loc-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .loc-map iframe { width: 100%; height: 360px; border: none; border-radius: 12px; display: block; }
+    .loc-list { }
+    .loc-item { display: flex; gap: 14px; margin-bottom: 24px; align-items: flex-start; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.07); }
+    .loc-ico { width: 36px; height: 36px; background: rgba(255,87,34,.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--naranja); }
+    .loc-lbl { font-size: .65rem; font-weight: 700; letter-spacing: 3px; color: var(--naranja); text-transform: uppercase; margin-bottom: 5px; }
+    .loc-val { color: var(--gris); font-size: .93rem; line-height: 1.65; }
+    .loc-val a { color: var(--blanco); text-decoration: none; }
+    .maps-btn {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
+      background: linear-gradient(135deg, var(--naranja), var(--amarillo));
+      color: #000; padding: 11px 24px; border-radius: 8px;
+      font-family: 'Poppins', sans-serif; font-size: .82rem; font-weight: 700;
+      text-decoration: none; transition: all .3s;
     }
-    .hero-overline::before {
-      content: '';
-      width: 30px; height: 1px;
-      background: var(--accent);
-    }
+    .maps-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,87,34,.4); }
 
-    .hero h1 {
-      font-size: clamp(2.8rem, 5.5vw, 5rem);
-      font-weight: 800; line-height: 1.05;
-      color: var(--white); margin-bottom: 1rem;
-      letter-spacing: -1px;
-    }
-    .hero h1 span { color: var(--red); }
-
-    .hero-tagline { font-size: 1.1rem; color: var(--light-2); margin-bottom: 0.6rem; font-weight: 300; line-height: 1.6; }
-    .hero-sub { font-size: 0.95rem; color: var(--gray); margin-bottom: 2rem; }
-
-    .btn-red {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      background: var(--red); color: var(--white);
-      text-decoration: none; font-weight: 700; font-size: 0.9rem;
-      padding: 0.95rem 2rem; border-radius: 8px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 20px rgba(233,69,96,0.3);
-    }
-    .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(233,69,96,0.5); }
-
-    .hero-image-side {
-      position: relative; z-index: 1;
-    }
-    .hero-img-wrap {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(100,255,218,0.15);
-    }
-    .hero-img-wrap img { width: 100%; height: 380px; object-fit: cover; display: block; opacity: 0.85; }
-    .hero-img-badge {
-      position: absolute;
-      bottom: 1.5rem; left: 1.5rem;
-      background: rgba(15,15,26,0.9);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(100,255,218,0.2);
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      color: var(--white);
-    }
-    .badge-num { font-size: 1.8rem; font-weight: 800; color: var(--accent); display: block; }
-    .badge-label { font-size: 0.75rem; color: var(--light-2); margin-top: 2px; }
-
-    section { padding: 5rem 1.5rem; }
-    .container { max-width: 1080px; margin: 0 auto; }
-    .section-label {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 4px; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 0.6rem;
-    }
-    .section-label::before { content: ''; width: 20px; height: 1px; background: var(--accent); }
-    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: var(--white); line-height: 1.2; }
-    .section-title span { color: var(--red); }
-    .section-header { margin-bottom: 3rem; }
-    .section-header.center { text-align: center; }
-    .section-header.center .section-label { justify-content: center; }
-    .section-header.center .section-label::before { display: none; }
-
-    /* SERVICES */
-    .services { background: var(--dark-2); }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 1.5rem;
-    }
-    .service-card {
-      background: var(--dark-3);
-      border: 1px solid rgba(100,255,218,0.07);
-      border-radius: 12px; padding: 2rem;
-      transition: all 0.3s;
-    }
-    .service-card:hover { border-color: rgba(233,69,96,0.3); transform: translateY(-3px); }
-    .service-num {
-      font-size: 0.7rem; font-weight: 700;
-      color: var(--accent); letter-spacing: 2px;
-      margin-bottom: 0.8rem;
-    }
-    .service-name { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
-    .service-desc { font-size: 0.88rem; color: var(--light-2); line-height: 1.65; }
-
-    /* STATS */
-    .stats-band { background: var(--red); padding: 2.5rem 1.5rem; }
-    .stats-inner {
-      max-width: 1080px; margin: 0 auto;
-      display: flex; justify-content: center; align-items: center;
-      gap: 0; flex-wrap: wrap;
-    }
-    .stat-item { text-align: center; color: var(--white); padding: 1rem 3rem; flex: 1; min-width: 140px; }
-    .stat-number { font-size: 2.8rem; font-weight: 800; display: block; line-height: 1; }
-    .stat-label { font-size: 0.8rem; opacity: 0.9; margin-top: 0.3rem; font-weight: 500; }
-    .stat-div { width: 1px; height: 50px; background: rgba(255,255,255,0.25); flex-shrink: 0; }
-
-    /* TESTIMONIALS */
-    .testimonials { background: var(--dark); }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .testi-card {
-      background: var(--dark-2);
-      border-radius: 12px; padding: 2rem;
-      border: 1px solid rgba(100,255,218,0.08);
-    }
-    .testi-stars { color: #f59e0b; font-size: 1rem; margin-bottom: 0.8rem; }
-    .testi-text { font-size: 0.93rem; line-height: 1.75; color: var(--light-2); margin-bottom: 1.4rem; }
-    .testi-author { display: flex; align-items: center; gap: 0.8rem; }
-    .testi-avatar {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--red), #a8004e);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; color: var(--white);
-    }
-    .testi-name { font-weight: 600; color: var(--white); font-size: 0.92rem; }
-
-    /* GALLERY */
-    .gallery { background: var(--dark-2); }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
-    }
-    .gallery-item { aspect-ratio: 4/3; overflow: hidden; border-radius: 10px; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; opacity: 0.9; }
-    .gallery-item:hover img { transform: scale(1.05); opacity: 1; }
-
-    /* LOCATION */
-    .location { background: var(--dark); }
-    .location-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem; align-items: start;
-    }
-    .map-wrap {
-      border-radius: 12px; overflow: hidden;
-      border: 2px solid rgba(233,69,96,0.2);
-      height: 360px;
-    }
-    .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
-    .location-info h3 { font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: 1.8rem; }
-    .loc-row { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1.2rem; color: var(--light-2); font-size: 0.95rem; line-height: 1.5; }
-    .loc-row svg { color: var(--red); flex-shrink: 0; margin-top: 2px; }
-    .btn-maps {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--red); color: var(--white);
-      text-decoration: none; padding: 0.85rem 1.8rem;
-      border-radius: 8px; font-size: 0.85rem; font-weight: 700;
-      margin-top: 1rem; transition: all 0.3s;
-    }
-    .btn-maps:hover { background: var(--red-dark); transform: translateY(-1px); }
-
-    /* CONTACT */
-    .contact { background: var(--dark-2); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.2rem;
-    }
-    .contact-card {
-      background: var(--dark-3);
-      border-radius: 12px; padding: 1.8rem;
-      text-align: center;
-      border: 1px solid rgba(100,255,218,0.08);
-      transition: all 0.3s;
-    }
-    .contact-card:hover { border-color: rgba(233,69,96,0.3); }
-    .contact-icon { width: 38px; height: 38px; color: var(--red); margin: 0 auto 0.8rem; }
-    .contact-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
-    .contact-value { font-size: 0.98rem; color: var(--white); font-weight: 500; }
-    .contact-link { color: var(--white); text-decoration: none; transition: color 0.2s; }
-    .contact-link:hover { color: var(--red); }
-
-    footer {
-      background: #070710;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      border-top: 1px solid rgba(233,69,96,0.12);
-    }
-    .footer-name { font-size: 1.5rem; font-weight: 800; color: var(--red); margin-bottom: 0.3rem; }
-    .footer-sub { font-size: 0.8rem; color: var(--gray); }
-
+    /* CONTACTO */
+    .ct-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .ct-card { background: rgba(255,255,255,.04); border-radius: 12px; padding: 28px 24px; border: 1px solid rgba(255,255,255,.07); }
+    .ct-lbl { font-family: 'Poppins', sans-serif; font-size: .65rem; font-weight: 700; letter-spacing: 3px; color: var(--naranja); text-transform: uppercase; margin-bottom: 12px; }
+    .ct-val { color: var(--gris); font-size: .93rem; line-height: 1.7; }
+    .ct-val a { color: var(--blanco); text-decoration: none; font-weight: 500; }
     .wa-btn {
-      position: fixed; bottom: 1.8rem; right: 1.8rem;
-      background: #25D366; width: 62px; height: 62px;
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.45);
-      z-index: 999; transition: all 0.3s ease;
+      display: inline-block; margin-top: 14px; background: #25D366; color: #fff;
+      padding: 10px 22px; border-radius: 8px; font-family: 'Poppins', sans-serif;
+      font-size: .82rem; font-weight: 700; text-decoration: none; transition: all .3s;
     }
-    .wa-btn:hover { transform: scale(1.12); }
-    .wa-btn svg { width: 32px; height: 32px; }
+    .wa-btn:hover { background: #1da851; transform: translateY(-1px); }
 
-    .fade-up { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 768px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-image-side { display: none; }
-      .location-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .stat-div { display: none; }
+    /* FOOTER */
+    footer {
+      background: #0d0d1a; padding: 40px 6vw; border-top: 2px solid var(--naranja);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
     }
-    @media (max-width: 480px) {
-      section { padding: 3.5rem 1rem; }
-      .gallery-grid { grid-template-columns: 1fr; }
+    .f-logo { font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--blanco); }
+    .f-logo span { color: var(--naranja); }
+    .f-info { color: var(--gris); font-size: .78rem; }
+
+    /* WA FLOAT */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 60px; height: 60px; background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,.5);
+      animation: energyBounce 1.8s ease-in-out infinite;
+    }
+    .wa-float:hover { background: #1da851; animation: none; transform: scale(1.12); }
+    @keyframes energyBounce { 0%,100%{transform:translateY(0) scale(1);} 40%{transform:translateY(-8px) scale(1.04);} 60%{transform:translateY(-4px) scale(1.02);} }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px) scale(.98); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.on { opacity: 1; transform: translateY(0) scale(1); }
+
+    @media(max-width:900px) {
+      .about-cols, .loc-cols { grid-template-columns: 1fr; }
+      .testi-grid, .ct-grid, .diff-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width:600px) {
+      .section { padding: 60px 5vw; }
+      .srv-grid, .gal-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid-overlay"></div>
-    <div class="hero-inner">
-      <div>
-        <div class="hero-overline">Estudio Fotográfico · Villa El Salvador</div>
-        <h1>Foto<br><span>Midis</span></h1>
-        <p class="hero-tagline">Fotografía y servicios de impresión rápidos y accesibles en Villa El Salvador</p>
-        <p class="hero-sub">Fotos para documentos, impresiones y más — servicio ágil y trato amable</p>
-        <a href="https://wa.me/51953058989?text=Hola,%20quiero%20información%20sobre%20los%20servicios%20de%20Foto%20Midis" class="btn-red">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Consultar precios
-        </a>
-      </div>
-      <div class="hero-image-side">
-        <div class="hero-img-wrap">
-          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=700&q=80&fit=crop" alt="Foto Midis estudio">
-          <div class="hero-img-badge">
-            <span class="badge-num">VES</span>
-            <div class="badge-label">Villa El Salvador, Lima</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<nav>
+  <div class="nav-logo">FOTO <span>MIDIS</span></div>
+  <a href="https://wa.me/51953058989" class="nav-cta" target="_blank">Contactar</a>
+</nav>
 
-  <!-- SERVICIOS -->
-  <section class="services" id="servicios">
-    <div class="container">
-      <div class="section-header center fade-up">
-        <span class="section-label">Servicios</span>
-        <h2 class="section-title">¿Qué puedes <span>encontrar aquí?</span></h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <div class="service-num">— 01</div>
-          <div class="service-name">Fotos para Documentos</div>
-          <p class="service-desc">Fotos para DNI, brevete, pasaporte y carnet. Entrega rápida en el acto con calidad garantizada.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-num">— 02</div>
-          <div class="service-name">Impresión Fotográfica</div>
-          <p class="service-desc">Imprimimos tus fotos en papel fotográfico de calidad en distintos tamaños: 4x6, 5x7, 8x10 y más.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-num">— 03</div>
-          <div class="service-name">Ampliaciones</div>
-          <p class="service-desc">Ampliamos tus fotos favoritas para enmarcar o decorar tu hogar en formatos grandes.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-num">— 04</div>
-          <div class="service-name">Sesiones de Retrato</div>
-          <p class="service-desc">Sesiones individuales y familiares con buena iluminación y edición básica incluida.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-num">— 05</div>
-          <div class="service-name">Impresión en Tarjetas</div>
-          <p class="service-desc">Tarjetas de presentación, tarjetas de cumpleaños y recordatorios impresos al momento.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-num">— 06</div>
-          <div class="service-name">Digitalización de Fotos</div>
-          <p class="service-desc">Escaneamos tus fotos antiguas para tenerlas en digital y poder compartirlas fácilmente.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats-band">
-    <div class="stats-inner">
-      <div class="stat-item fade-up">
-        <span class="stat-number">Rápido</span>
-        <div class="stat-label">Entrega en el acto</div>
-      </div>
-      <div class="stat-div"></div>
-      <div class="stat-item fade-up">
-        <span class="stat-number">Accesible</span>
-        <div class="stat-label">Precios para todos</div>
-      </div>
-      <div class="stat-div"></div>
-      <div class="stat-item fade-up">
-        <span class="stat-number">VES</span>
-        <div class="stat-label">Villa El Salvador</div>
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-gradient"></div>
+  <div class="hero-splash"></div>
+  <div class="hero-splash2"></div>
+  <div class="hero-inner">
+    <div class="hero-tag"><div class="dot"></div>Estudio de Fotografía · Villa El Salvador</div>
+    <h1 class="hero-title">Tu momento<br><span class="highlight">en foco</span></h1>
+    <div class="hero-row">
+      <p class="hero-sub">Foto Midis es el estudio fotográfico de Villa El Salvador donde cada sesión cuenta. Creativo, accesible y cercano al barrio.</p>
+      <div class="hero-cta-box">
+        <a href="https://wa.me/51953058989" class="btn-gradient" target="_blank">Solicitar sesión</a>
+        <a href="#servicios" class="btn-ghost-w">Ver lo que hacemos</a>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- TESTIMONIOS -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header center fade-up">
-        <span class="section-label">Clientes</span>
-        <h2 class="section-title">Lo que dicen <span>de nosotros</span></h2>
+<!-- SOBRE -->
+<section class="section section-alt reveal">
+  <div class="about-cols">
+    <div>
+      <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=900&q=80&fit=crop" alt="Foto Midis estudio" class="about-photo">
+    </div>
+    <div class="about-body">
+      <p class="sec-label">Quiénes somos</p>
+      <h2 class="sec-title">Tu estudio fotográfico<br>en <span class="accent">Villa El Salvador</span></h2>
+      <div class="orange-bar"></div>
+      <p>En Foto Midis nos dedicamos a capturar momentos con creatividad y compromiso. Somos un estudio local que entiende las necesidades del barrio y trabaja con precios accesibles sin sacrificar la calidad.</p>
+      <p>Cada sesión es una oportunidad para hacer algo memorable. Desde fotos de documento hasta coberturas de eventos, ponemos energía y dedicación en todo lo que hacemos.</p>
+      <ul class="feature-list">
+        <li class="feature-item"><div class="feature-dot"></div>Precios accesibles para Villa El Salvador</li>
+        <li class="feature-item"><div class="feature-dot"></div>Entrega rápida de fotos digitales</li>
+        <li class="feature-item"><div class="feature-dot"></div>Atención personalizada en cada sesión</li>
+        <li class="feature-item"><div class="feature-dot"></div>Impresión y revelado en el momento</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section reveal" id="servicios">
+  <p class="sec-label">Servicios</p>
+  <h2 class="sec-title">¿Qué <span class="accent">necesitas</span>?</h2>
+  <div class="orange-bar"></div>
+  <div class="srv-grid">
+    <div class="srv-card">
+      <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a5 5 0 0110 0v2"/><circle cx="12" cy="14" r="2"/></svg></div>
+      <div class="srv-name">Fotos de Documento</div>
+      <div class="srv-desc">DNI, pasaporte, carnet, visa. Entrega inmediata en el formato que necesitas. Rápido y sin colas.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <div class="srv-name">Retratos y Sesiones</div>
+      <div class="srv-desc">Fotos individuales, familiares o de pareja. Un ambiente cómodo y resultados que vas a querer compartir.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="srv-name">Eventos y Celebraciones</div>
+      <div class="srv-desc">Cumpleaños, quince años, graduaciones, bautizos. Cobertura completa para que no se pierda ningún momento especial.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div class="srv-name">Impresión y Ampliaciones</div>
+      <div class="srv-desc">Fotos impresas en distintos formatos y materiales. Desde 10x15 hasta grandes ampliaciones decorativas.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg></div>
+      <div class="srv-name">Edición y Retoque</div>
+      <div class="srv-desc">Edición profesional de tus imágenes. Corrección de luz, color y retoques para que las fotos queden perfectas.</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff5722" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+      <div class="srv-name">Fotos para Redes</div>
+      <div class="srv-desc">Contenido visual para tu negocio en redes sociales. Imágenes de producto, portadas y más.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIADORES -->
+<section class="section section-alt reveal">
+  <p class="sec-label">Por qué elegirnos</p>
+  <h2 class="sec-title">Lo que nos hace <span class="accent">diferentes</span></h2>
+  <div class="orange-bar"></div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <div class="diff-icon">⚡</div>
+      <div class="diff-title">Entrega rápida</div>
+      <div class="diff-desc">Tus fotos de documento listas en minutos. Eventos y sesiones entregadas en 24-48 horas.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">💰</div>
+      <div class="diff-title">Precios accesibles</div>
+      <div class="diff-desc">Calidad fotográfica real a precios pensados para Villa El Salvador. Sin cobros ocultos ni sorpresas.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">🎯</div>
+      <div class="diff-title">Atención personalizada</div>
+      <div class="diff-desc">Escuchamos lo que necesitas y trabajamos para que el resultado supere tus expectativas.</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="section reveal">
+  <p class="sec-label">Portafolio</p>
+  <h2 class="sec-title">Nuestro <span class="accent">trabajo</span></h2>
+  <div class="orange-bar"></div>
+  <div class="gal-grid">
+    <div class="gal-cell">
+      <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&q=80&fit=crop" alt="Fotografía profesional">
+    </div>
+    <div class="gal-cell">
+      <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80&fit=crop" alt="Sesión fotográfica">
+    </div>
+    <div class="gal-cell">
+      <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=800&q=80&fit=crop" alt="Estudio de fotografía">
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section section-alt reveal">
+  <p class="sec-label">Opiniones</p>
+  <h2 class="sec-title">Lo que <span class="accent">dicen</span></h2>
+  <div class="orange-bar"></div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Vine para fotos de DNI y me atendieron al toque. Rápido, el resultado correcto y sin esperar. Un local cómodo y bien ubicado en Villa El Salvador."</p>
+      <div class="testi-name">— Pedro Quispe R.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Le hicieron las fotos de 15 años a mi hija y quedaron muy lindas. El ambiente del estudio es bueno y las fotos editadas con cuidado. Vale la pena."</p>
+      <div class="testi-name">— Carmen Flores T.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★☆</div>
+      <p class="testi-text">"Pedí impresión de fotos familiares en varios tamaños y quedaron bien. El precio fue justo y el trato amable. Volvería para más trabajos."</p>
+      <div class="testi-name">— Luis Mamani V.</div>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACIÓN -->
+<section class="section reveal">
+  <p class="sec-label">Dónde estamos</p>
+  <h2 class="sec-title">Ubicación en <span class="accent">VES</span></h2>
+  <div class="orange-bar"></div>
+  <div class="loc-cols">
+    <div class="loc-map">
+      <iframe src="https://maps.google.com/maps?q=-12.2127597,-76.9363184&output=embed" allowfullscreen loading="lazy" title="Foto Midis ubicación"></iframe>
+    </div>
+    <div class="loc-list">
+      <div class="loc-item">
+        <div class="loc-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="loc-lbl">Dirección</div><div class="loc-val">Villa El Salvador<br>Lima, Perú</div></div>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card fade-up">
-          <div class="testi-stars">★★★☆☆</div>
-          <p class="testi-text">Vine a hacerme fotos para el DNI y salieron bien para el trámite. El servicio fue rápido, no esperé mucho. Para documentos cumple su función.</p>
-          <div class="testi-author">
-            <div class="testi-avatar">F</div>
-            <div><div class="testi-name">Felipe Vargas</div></div>
-          </div>
-        </div>
-        <div class="testi-card fade-up">
-          <div class="testi-stars">★★★★☆</div>
-          <p class="testi-text">Mandé a imprimir varias fotos y quedaron bien para el precio que pagué. Es un servicio básico pero cumple para lo que uno necesita en el día a día.</p>
-          <div class="testi-author">
-            <div class="testi-avatar">I</div>
-            <div><div class="testi-name">Isabel Cruz</div></div>
-          </div>
-        </div>
-        <div class="testi-card fade-up">
-          <div class="testi-stars">★★★☆☆</div>
-          <p class="testi-text">Útil cuando necesitas fotos rápido en Villa El Salvador. Me atendieron bien y el precio fue razonable. Para el tiempo y la distancia, bien.</p>
-          <div class="testi-author">
-            <div class="testi-avatar">O</div>
-            <div><div class="testi-name">Orlando Quispe</div></div>
-          </div>
-        </div>
+      <div class="loc-item">
+        <div class="loc-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 013-8.63A2 2 0 017.91 2h0a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div><div class="loc-lbl">Teléfono</div><div class="loc-val"><a href="tel:953058989">953 058 989</a></div></div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><div class="loc-lbl">Horario</div><div class="loc-val">Lunes a Sábado: 9:00 am – 7:00 pm<br>Domingos: 10:00 am – 3:00 pm</div></div>
+      </div>
+      <a href="https://www.google.com/maps/place/Foto+Midis/@-12.2127597,-76.9363184,17z" class="maps-btn" target="_blank">Ver en Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section section-alt reveal">
+  <p class="sec-label">Escríbenos</p>
+  <h2 class="sec-title">¿Listo para <span class="accent">comenzar</span>?</h2>
+  <div class="orange-bar"></div>
+  <div class="ct-grid">
+    <div class="ct-card">
+      <div class="ct-lbl">WhatsApp</div>
+      <div class="ct-val">Consultanos sin compromiso.<br>
+        <a href="https://wa.me/51953058989" class="wa-btn" target="_blank">💬 Escribir al WhatsApp</a>
       </div>
     </div>
-  </section>
-
-  <!-- GALERÍA -->
-  <section class="gallery">
-    <div class="container">
-      <div class="section-header center fade-up">
-        <span class="section-label">Trabajo</span>
-        <h2 class="section-title">Nuestros <span>servicios</span> en imágenes</h2>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=80&fit=crop" alt="Fotografía">
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=600&q=80&fit=crop" alt="Cámara">
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=600&q=80&fit=crop" alt="Impresión fotográfica">
-        </div>
-      </div>
+    <div class="ct-card">
+      <div class="ct-lbl">Teléfono</div>
+      <div class="ct-val"><a href="tel:953058989">953 058 989</a></div>
     </div>
-  </section>
-
-  <!-- UBICACIÓN -->
-  <section class="location">
-    <div class="container">
-      <div class="location-grid">
-        <div class="fade-up">
-          <div class="section-header">
-            <span class="section-label">Ubicación</span>
-            <h2 class="section-title">Nos encontrarás en<br><span>Villa El Salvador</span></h2>
-          </div>
-          <div class="loc-row">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Villa El Salvador, Lima</span>
-          </div>
-          <div class="loc-row">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            <span>953 058 989</span>
-          </div>
-          <div class="loc-row">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Lunes a Sábado: 9:00 am – 7:00 pm</span>
-          </div>
-          <a href="https://www.google.com/maps/place/Foto+Midis/@-12.2127597,-76.9363184,17z" target="_blank" class="btn-maps">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Ver en Google Maps
-          </a>
-        </div>
-        <div class="fade-up">
-          <div class="map-wrap">
-            <iframe src="https://maps.google.com/maps?q=-12.2127597,-76.9363184&output=embed" allowfullscreen loading="lazy" title="Foto Midis Villa El Salvador"></iframe>
-          </div>
-        </div>
-      </div>
+    <div class="ct-card">
+      <div class="ct-lbl">Ubicación</div>
+      <div class="ct-val">Villa El Salvador<br>Lima, Perú</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACTO -->
-  <section class="contact">
-    <div class="container">
-      <div class="section-header center fade-up">
-        <span class="section-label">Contacto</span>
-        <h2 class="section-title">¿En qué podemos <span>ayudarte?</span></h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card fade-up">
-          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div class="contact-label">Teléfono</div>
-          <div class="contact-value"><a href="tel:+51953058989" class="contact-link">953 058 989</a></div>
-        </div>
-        <div class="contact-card fade-up">
-          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-          <div class="contact-label">WhatsApp</div>
-          <div class="contact-value"><a href="https://wa.me/51953058989" class="contact-link">Escríbenos</a></div>
-        </div>
-        <div class="contact-card fade-up">
-          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="contact-label">Ubicación</div>
-          <div class="contact-value">Villa El Salvador<br>Lima, Perú</div>
-        </div>
-        <div class="contact-card fade-up">
-          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="contact-label">Horario</div>
-          <div class="contact-value">Lun–Sáb 9am–7pm</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer>
+  <div class="f-logo">FOTO <span>MIDIS</span></div>
+  <div class="f-info">Estudio de Fotografía · Villa El Salvador · Lima, Perú</div>
+</footer>
 
-  <footer>
-    <div class="footer-name">Foto Midis</div>
-    <div class="footer-sub">Estudio de Fotografía · Villa El Salvador, Lima · Perú</div>
-  </footer>
+<a href="https://wa.me/51953058989" class="wa-float" target="_blank" aria-label="WhatsApp Foto Midis">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
-  <a href="https://wa.me/51953058989?text=Hola,%20quiero%20información%20sobre%20los%20servicios%20de%20Foto%20Midis" class="wa-btn" title="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+<script>
+  document.getElementById('hero').classList.add('loaded');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-count]').forEach(el=>countUp(el,+el.dataset.count));
+      io.unobserve(e.target);
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  function countUp(el,n){let v=0;const t=setInterval(()=>{v=Math.min(v+n/40,n);el.textContent=Math.floor(v);if(v>=n)clearInterval(t);},28);}
+</script>
 </body>
 </html>
